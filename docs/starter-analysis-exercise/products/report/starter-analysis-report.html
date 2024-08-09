@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your Name">
-<meta name="dcterms.date" content="2024-01-02">
+<meta name="author" content="Edward Cruz, Jr., Leonel G. Salazar, Amelia Tristan, Mojisola Popoola">
+<meta name="dcterms.date" content="2024-08-08">
 
-<title>YOURNAME Data Analysis Portfolio - Manuscript/Report Template for a Data Analysis Project</title>
+<title>YOURNAME Data Analysis Portfolio - Honey Bee Colonies Impacted by Varroa, American Foulbrood and Global Warming</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,6 +26,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -66,7 +67,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -75,11 +82,17 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
+<link href="../../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../../../site_libs/viz-1.8.2/viz.js"></script>
+<link href="../../../site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="../../../site_libs/grViz-binding-1.0.11/grViz.js"></script>
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -89,9 +102,9 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">YOURNAME Data Analysis Portfolio</span>
     </a>
@@ -103,28 +116,28 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../aboutme.html" rel="" target="">
- <span class="menu-text">About Me</span></a>
+    <a class="nav-link" href="../../../aboutme.html"> 
+<span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Projects</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
         <li>
-    <a class="dropdown-item" href="../../../starter-analysis-exercise/products/report/starter-analysis-report.html" rel="" target="">
+    <a class="dropdown-item" href="../../../starter-analysis-exercise/products/report/starter-analysis-report.html">
  <span class="dropdown-text">Starter Analysis Exercise</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../coding-exercise/coding-exercise.html" rel="" target="">
+    <a class="dropdown-item" href="../../../coding-exercise/coding-exercise.html">
  <span class="dropdown-text">R Coding Exercise</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../presentation-exercise/presentation-exercise.html" rel="" target="">
+    <a class="dropdown-item" href="../../../presentation-exercise/presentation-exercise.html">
  <span class="dropdown-text">Presentation Exercise</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../tidytuesday-exercise/tidytuesday-exercise.html" rel="" target="">
+    <a class="dropdown-item" href="../../../tidytuesday-exercise/tidytuesday-exercise.html">
  <span class="dropdown-text">Tidy Tuesday Exercise</span></a>
   </li>  
     </ul>
@@ -132,14 +145,14 @@ div.csl-indent {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="../../../URL-TO-THIS-REPOSITORY-HERE" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="../../../URL-TO-THIS-REPOSITORY-HERE"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -153,7 +166,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Manuscript/Report Template for a Data Analysis Project</h1>
+<h1 class="title">Honey Bee Colonies Impacted by Varroa, American Foulbrood and Global Warming</h1>
 </div>
 
 
@@ -163,14 +176,14 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Your Name </p>
+             <p>Edward Cruz, Jr., Leonel G. Salazar, Amelia Tristan, Mojisola Popoola </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 2, 2024</p>
+      <p class="date">August 8, 2024</p>
     </div>
   </div>
   
@@ -178,262 +191,757 @@ div.csl-indent {
   </div>
   
 
+
 </header>
 
-<p>The structure below is one possible setup for a data analysis project (including the course project). For a manuscript, adjust as needed. You don’t need to have exactly these sections, but the content covering those sections should be addressed.</p>
-<p>This uses MS Word as output format. <a href="https://quarto.org/docs/output-formats/ms-word.html">See here</a> for more information. You can switch to other formats, like html or pdf. See <a href="https://quarto.org/">the Quarto documentation</a> for other formats.</p>
+
 <section id="summaryabstract" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Summary/Abstract</h1>
-<p><em>Write a summary of your project.</em></p>
+<p>Group Ten is conducting a comprehensive analysis of historical data from various public agencies to evaluate the impact of Varroa mites, American Foulbrood, and global warming on hive losses in the United States.This research utilizes extensive datasets from the National Agricultural Statistics Service, the Agricultural Statistics Board, and the United States Department of Agriculture (USDA), encompassing multiple years of data. The data highlights the topic on hive losses attributed to mites, bacterial infections, and environmental factors related to global warming. Through advanced data visualization techniques in R, we aim to demonstrate and validate the detrimental effects of these factors on honeybee colonies, highlighting the consequent implications for honey production and broader food security. <strong><em>Dennis and Kemp’s study on honey bee hive collapse <span class="citation" data-cites="hivecollapse">(<a href="#ref-hivecollapse" role="doc-biblioref">Dennis &amp; Kemp, 2016</a>)</span> provides important insights into Allee effects and ecological resilience.</em></strong> <strong><em>Warmer climate may impact bees<span class="citation" data-cites="2024warmer">(<a href="#ref-2024warmer" role="doc-biblioref"><strong>2024warmer?</strong></a>)</span></em></strong></p>
 <div style="page-break-after: always;"></div>
 </section>
 <section id="introduction" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
-<section id="general-background-information" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="general-background-information"><span class="header-section-number">2.1</span> General Background Information</h2>
-<p><em>Provide enough background on your topic that others can understand the why and how of your analysis</em></p>
-</section>
-<section id="description-of-data-and-data-source" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="description-of-data-and-data-source"><span class="header-section-number">2.2</span> Description of data and data source</h2>
-<p><em>Describe what the data is, what it contains, where it is from, etc. Eventually this might be part of a methods section.</em></p>
-</section>
-<section id="questionshypotheses-to-be-addressed" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="questionshypotheses-to-be-addressed"><span class="header-section-number">2.3</span> Questions/Hypotheses to be addressed</h2>
-<p><em>State the research questions you plan to answer with this analysis.</em></p>
-<p>To cite other work (important everywhere, but likely happens first in introduction), make sure your references are in the bibtex file specified in the YAML header above (here <code>dataanalysis_template_references.bib</code>) and have the right bibtex key. Then you can include like this:</p>
-<p>Examples of reproducible research projects can for instance be found in <span class="citation" data-cites="mckay2020 mckay2020a">(<a href="#ref-mckay2020" role="doc-biblioref">McKay, Ebell, Billings, et al., 2020</a>; <a href="#ref-mckay2020a" role="doc-biblioref">McKay, Ebell, Dale, Shen, &amp; Handel, 2020</a>)</span></p>
-<div style="page-break-after: always;"></div>
-</section>
-</section>
-<section id="methods" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Methods</h1>
-<p><em>Describe your methods. That should describe the data, the cleaning processes, and the analysis approaches. You might want to provide a shorter description here and all the details in the supplement.</em></p>
-<section id="data-aquisition" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="data-aquisition"><span class="header-section-number">3.1</span> Data aquisition</h2>
-<p><em>As applicable, explain where and how you got the data. If you directly import the data from an online source, you can combine this section with the next.</em></p>
-</section>
-<section id="data-import-and-cleaning" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="data-import-and-cleaning"><span class="header-section-number">3.2</span> Data import and cleaning</h2>
-<p><em>Write code that reads in the file and cleans it so it’s ready for analysis. Since this will be fairly long code for most datasets, it might be a good idea to have it in one or several R scripts. If that is the case, explain here briefly what kind of cleaning/processing you do, and provide more details and well documented code somewhere (e.g.&nbsp;as supplement in a paper). All materials, including files that contain code, should be commented well so everyone can follow along.</em></p>
-</section>
-<section id="statistical-analysis" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="statistical-analysis"><span class="header-section-number">3.3</span> Statistical analysis</h2>
-<p><em>Explain anything related to your statistical analyses.</em></p>
-<div style="page-break-after: always;"></div>
-</section>
-</section>
-<section id="results" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Results</h1>
-<section id="exploratorydescriptive-analysis" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="exploratorydescriptive-analysis"><span class="header-section-number">4.1</span> Exploratory/Descriptive analysis</h2>
-<p><em>Use a combination of text/tables/figures to explore and describe your data. Show the most important descriptive results here. Additional ones should go in the supplement. Even more can be in the R and Quarto files that are part of your project.</em></p>
-<p><a href="#tbl-summarytable">Table&nbsp;1</a> shows a summary of the data.</p>
-<p>Note the loading of the data providing a <strong>relative</strong> path using the <code>../../</code> notation. (Two dots means a folder up). You never want to specify an <strong>absolute</strong> path like <code>C:\ahandel\myproject\results\</code> because if you share this with someone, it won’t work for them since they don’t have that path. You can also use the <code>here</code> R package to create paths. See examples of that below. <strong>I recommend the <code>here</code> package, but I’m showing the other approach here just in case you encounter it.</strong></p>
+<p>Honeybees have served as nature’s pollinators for centuries. With their relationship with humans documented as far back as ancient Egyptian and Hindu cultures. Historically, humans have maintained beehives and utilized honey for its medicinal properties in various civilizations, including the Egyptians, Assyrians, Chinese, Greeks, and Romans. Honey’s natural antibacterial qualities made it a valuable treatment for wounds. This was a practice continued by Romans and Russians during World War I. Honeybees and other pollinators are essential for food production and nutritional security. But even though they face numerous survival challenges Varroa mites pose a significant threat to bee colonies. These tiny red-brown parasites live on adult honeybees and reproduce on larvae and pupae. Another major threat is American Foulbrood Disease (AFB). This is caused by the bacterium Paenibacillus larvae, which is fatal to honeybee larvae and requires incineration of infected hives to prevent its spread. The impact of climate change on honeybee colony losses is a growing area of research. While correlations have been found between higher winter temperatures and increased colony losses, the effects of warmer autumn and winter temperatures on colony dynamics and survival require further investigation. <strong><em>Dennis and Kemp’s study on honey bee hive collapse <span class="citation" data-cites="hivecollapse">(<a href="#ref-hivecollapse" role="doc-biblioref">Dennis &amp; Kemp, 2016</a>)</span> provides important insights into Allee effects and ecological resilience.</em></strong> <span class="citation" data-cites="usda_honey_bees usda_nass">(<a href="#ref-usda_nass" role="doc-biblioref">USDA - National Agricultural Statistics Service, n.d.</a>; <a href="#ref-usda_honey_bees" role="doc-biblioref">USDA Economics, Statistics and Market Information System, n.d.-a</a>)</span>***</p>
+<p><strong><em>Warmer climate may impact bees<span class="citation" data-cites="2024warmer">(<a href="#ref-2024warmer" role="doc-biblioref"><strong>2024warmer?</strong></a>)</span></em></strong></p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="tbl-summarytable" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;1: Data summary table.</caption>
-<colgroup>
-<col style="width: 5%">
-<col style="width: 7%">
-<col style="width: 5%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 8%">
-<col style="width: 9%">
-<col style="width: 6%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">skim_type</th>
-<th style="text-align: left;">skim_variable</th>
-<th style="text-align: right;">n_missing</th>
-<th style="text-align: right;">complete_rate</th>
-<th style="text-align: left;">factor.ordered</th>
-<th style="text-align: right;">factor.n_unique</th>
-<th style="text-align: left;">factor.top_counts</th>
-<th style="text-align: right;">numeric.mean</th>
-<th style="text-align: right;">numeric.sd</th>
-<th style="text-align: right;">numeric.p0</th>
-<th style="text-align: right;">numeric.p25</th>
-<th style="text-align: right;">numeric.p50</th>
-<th style="text-align: right;">numeric.p75</th>
-<th style="text-align: right;">numeric.p100</th>
-<th style="text-align: left;">numeric.hist</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">factor</td>
-<td style="text-align: left;">Gender</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">M: 4, F: 3, O: 2</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">numeric</td>
-<td style="text-align: left;">Height</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">165.66667</td>
-<td style="text-align: right;">15.97655</td>
-<td style="text-align: right;">133</td>
-<td style="text-align: right;">156</td>
-<td style="text-align: right;">166</td>
-<td style="text-align: right;">178</td>
-<td style="text-align: right;">183</td>
-<td style="text-align: left;">▂▁▃▃▇</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">numeric</td>
-<td style="text-align: left;">Weight</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">70.11111</td>
-<td style="text-align: right;">21.24526</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">55</td>
-<td style="text-align: right;">70</td>
-<td style="text-align: right;">80</td>
-<td style="text-align: right;">110</td>
-<td style="text-align: left;">▇▂▃▂▂</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="basic-statistical-analysis" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="basic-statistical-analysis"><span class="header-section-number">4.2</span> Basic statistical analysis</h2>
-<p><em>To get some further insight into your data, if reasonable you could compute simple statistics (e.g.&nbsp;simple models with 1 predictor) to look for associations between your outcome(s) and each individual predictor variable. Though note that unless you pre-specified the outcome and main exposure, any “p&lt;0.05 means statistical significance” interpretation is not valid.</em></p>
-<p><a href="#fig-result">Figure&nbsp;1</a> shows a scatterplot figure produced by one of the R scripts.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-result" class="quarto-figure quarto-figure-center anchored">
+<div>
 <figure class="figure">
-<p><img src="../../results/figures/height-weight-stratified.png" class="img-fluid figure-img" width="1050"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Height and weight stratified by gender.</figcaption>
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="composition-of-honey" class="level3" data-number="2.0.1">
+<h3 data-number="2.0.1" class="anchored" data-anchor-id="composition-of-honey"><span class="header-section-number">2.0.1</span> Composition of Honey</h3>
+<p>The first image is a pie chart that illustrates the composition of honey by percentage. The main components are:</p>
+<ul>
+<li><strong>Fructose</strong>: 38.5%</li>
+<li><strong>Glucose</strong>: 31%</li>
+<li><strong>Water</strong>: 17.1%</li>
+<li><strong>Maltose</strong>: 7.2%</li>
+<li><strong>Other components</strong>:
+<ul>
+<li>Sucrose: 1.5%</li>
+<li>Minerals, Vitamins, Enzymes: 0.5%</li>
+<li>Trisaccharides, Carbohydrates: 4.2%</li>
+</ul></li>
+</ul>
+<p>This composition indicates that honey is primarily made up of sugars, specifically fructose and glucose, with water being the third major component. The presence of minerals, vitamins, and enzymes, though in smaller amounts, adds nutritional value to honey. This detailed breakdown underscores honey’s role as a natural sweetener with additional health benefits beyond its primary carbohydrate content.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="full-analysis" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="full-analysis"><span class="header-section-number">4.3</span> Full analysis</h2>
-<p><em>Use one or several suitable statistical/machine learning methods to analyze your data and to produce meaningful figures, tables, etc. This might again be code that is best placed in one or several separate R scripts that need to be well documented. You want the code to produce figures and data ready for display as tables, and save those. Then you load them here.</em></p>
-<p>Example <a href="#tbl-resulttable2">Table&nbsp;2</a> shows a summary of a linear model fit.</p>
+<section id="spread-of-varroa-mites" class="level3" data-number="2.0.2">
+<h3 data-number="2.0.2" class="anchored" data-anchor-id="spread-of-varroa-mites"><span class="header-section-number">2.0.2</span> Spread of Varroa Mites</h3>
+<p>The second image is a map illustrating the spread of Varroa mites in the United States from 1986 to 1995. The map uses different colors to represent the year of the first appearance of Varroa mites in each state:</p>
+<ul>
+<li><strong>1986 - 1987</strong>: Red</li>
+<li><strong>1988 - 1989</strong>: Yellow</li>
+<li><strong>1990 - 1991</strong>: Green</li>
+<li><strong>1992 - 1993</strong>: Blue</li>
+<li><strong>1994 - 1995</strong>: Grey</li>
+<li><strong>NA</strong>: States where data is not available</li>
+</ul>
+<p>The map reveals the progressive spread of Varroa mites from the mid-1980s to the mid-1990s, affecting bee colonies across the country. The earliest appearances were concentrated in specific regions and gradually spread to more states over time. This visual representation highlights the increasing geographical distribution of Varroa mites and underscores the growing challenge they pose to beekeeping and agricultural industries in the United States. <span class="citation" data-cites="varroamap">(<a href="#ref-varroamap" role="doc-biblioref">sdns6mchl4, 2016</a>)</span> <strong><em>Varroa Map of infestation periods</em></strong></p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="tbl-resulttable2" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;2: Linear model fit table.</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">term</th>
-<th style="text-align: right;">estimate</th>
-<th style="text-align: right;">std.error</th>
-<th style="text-align: right;">statistic</th>
-<th style="text-align: right;">p.value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">(Intercept)</td>
-<td style="text-align: right;">149.2726967</td>
-<td style="text-align: right;">23.3823360</td>
-<td style="text-align: right;">6.3839942</td>
-<td style="text-align: right;">0.0013962</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Weight</td>
-<td style="text-align: right;">0.2623972</td>
-<td style="text-align: right;">0.3512436</td>
-<td style="text-align: right;">0.7470519</td>
-<td style="text-align: right;">0.4886517</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">GenderM</td>
-<td style="text-align: right;">-2.1244913</td>
-<td style="text-align: right;">15.5488953</td>
-<td style="text-align: right;">-0.1366329</td>
-<td style="text-align: right;">0.8966520</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">GenderO</td>
-<td style="text-align: right;">-4.7644739</td>
-<td style="text-align: right;">19.0114155</td>
-<td style="text-align: right;">-0.2506112</td>
-<td style="text-align: right;">0.8120871</td>
-</tr>
-</tbody>
-</table>
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
 </div>
+<p>The chart provided illustrates the changes in temperature anomalies over the years, from 1900 to approximately 2025. The temperature anomaly, measured in degrees Celsius (°C), is plotted on the y-axis, while the years are plotted on the x-axis. The data is divided into three different measurements: Earth’s surface, lower troposphere (RSS), and lower troposphere (UAH), each represented by different colors (blue, red, and green respectively).</p>
+</section>
+<section id="detailed-description" class="level3" data-number="2.0.3">
+<h3 data-number="2.0.3" class="anchored" data-anchor-id="detailed-description"><span class="header-section-number">2.0.3</span> Detailed Description:</h3>
+<ul>
+<li><strong>Trend Analysis</strong>:
+<ul>
+<li>From 1900 to around 1975, the Earth’s surface temperature shows considerable variability with some notable periods of cooling and warming.</li>
+<li>Post-1975, there is a distinct upward trend in temperature anomalies for all three measurements, indicating a general warming trend.</li>
+</ul></li>
+<li><strong>Measurement Comparison</strong>:
+<ul>
+<li>The Earth’s surface (blue line) shows the most extended historical data and fluctuates more in the earlier years compared to the troposphere measurements.</li>
+<li>The lower troposphere measurements (RSS in red and UAH in green) start around 1975 and generally follow the same upward trend as the surface measurements but with less variability.</li>
+<li>The RSS and UAH measurements align closely with each other post-2000, indicating consistent trends in the lower troposphere temperature anomalies.</li>
+</ul></li>
+<li><strong>Anomalies &amp; Peaks</strong>:
+<ul>
+<li>The Earth’s surface shows significant peaks and troughs, especially in the early 20th century and around the year 2000.</li>
+<li>The lower troposphere measurements show peaks and align closely, particularly after the year 2000, reflecting similar patterns in temperature anomalies.</li>
+</ul></li>
+</ul>
+</section>
+<section id="key-points" class="level3" data-number="2.0.4">
+<h3 data-number="2.0.4" class="anchored" data-anchor-id="key-points"><span class="header-section-number">2.0.4</span> Key Points:</h3>
+<ul>
+<li>The overall trend shows an increase in temperature anomalies from 1900 to 2025.</li>
+<li>Significant variability is seen in Earth’s surface temperatures in the early years.</li>
+<li>Post-1975, a clear warming trend is observed across all measurements.</li>
+<li>Lower troposphere data (RSS and UAH) begins around 1975 and follows the Earth’s surface trend with less variability.</li>
+<li>Post-2000, the RSS and UAH data closely align, indicating consistent temperature trends in the lower troposphere.</li>
+<li>There are noticeable peaks in the temperature anomalies around the year 2000 and later, reflecting periods of significant temperature increases.</li>
+</ul>
+</section>
+<section id="impact-on-bees-varroa-mites-and-colony-loss" class="level3" data-number="2.0.5">
+<h3 data-number="2.0.5" class="anchored" data-anchor-id="impact-on-bees-varroa-mites-and-colony-loss"><span class="header-section-number">2.0.5</span> Impact on Bees, Varroa Mites, and Colony Loss:</h3>
+<ul>
+<li><strong>Bees</strong>:
+<ul>
+<li><strong>Thermal Stress</strong>: Increased temperature anomalies can cause thermal stress on bees, affecting their ability to forage, navigate, and perform essential colony tasks.</li>
+<li><strong>Floral Resources</strong>: Warming temperatures can alter the availability and distribution of floral resources, impacting bee nutrition and health.</li>
+<li><strong>Reproduction Cycles</strong>: Changes in temperature can disrupt the reproductive cycles of bees, potentially leading to mismatches with the availability of pollen and nectar.</li>
+</ul></li>
+<li><strong>Varroa Mites</strong>:
+<ul>
+<li><strong>Increased Reproduction</strong>: Warmer temperatures can accelerate the reproduction rates of varroa mites, exacerbating infestations within bee colonies.</li>
+<li><strong>Extended Activity Period</strong>: Higher temperatures can lengthen the active period of varroa mites throughout the year, leading to prolonged periods of stress on bee populations.</li>
+</ul></li>
+<li><strong>Colony Loss</strong>:
+<ul>
+<li><strong>Health Decline</strong>: Combined effects of thermal stress on bees and increased varroa mite infestations can lead to a decline in colony health.</li>
+<li><strong>Colony Collapse Disorder (CCD)</strong>: Temperature anomalies can contribute to conditions that favor Colony Collapse Disorder, where the majority of worker bees disappear, leaving behind the queen and immature bees.</li>
+<li><strong>Mortality Rates</strong>: Sustained temperature increases can lead to higher mortality rates within bee colonies, significantly impacting beekeeping and agricultural pollination services.</li>
+</ul></li>
+</ul>
+</section>
+<section id="conclusion" class="level3" data-number="2.0.6">
+<h3 data-number="2.0.6" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">2.0.6</span> Conclusion:</h3>
+<p>The chart highlights a clear trend of increasing temperature anomalies, which can have profound implications on bee populations, varroa mite dynamics, and overall colony health. Understanding these trends is crucial for developing strategies to mitigate the adverse effects on bees and ensure the sustainability of pollination services essential for ecosystems and agriculture.</p>
+<p><span class="citation" data-cites="epa_climate">(<a href="#ref-epa_climate" role="doc-biblioref"><strong>epa_climate?</strong></a>)</span> <strong><em>Global warming trends from 1900-2024</em></strong></p>
+<p><strong><em>Spread of Varroa Mite by Year of First Apperance <span class="citation" data-cites="varroamap">(<a href="#ref-varroamap" role="doc-biblioref">sdns6mchl4, 2016</a>)</span></em></strong> Written By:sdns6mchl4. (2016, February 24). Varroa mite spread in the United States. Beesource Beekeeping Forums. https://www.beesource.com/threads/varroa-mite-spread-in-the-united-states.365462/</p>
+<p>## General Background Information</p>
+</section>
+<section id="uncapped-honey-floresvilletexas-hive" class="level3" data-number="2.0.7">
+<h3 data-number="2.0.7" class="anchored" data-anchor-id="uncapped-honey-floresvilletexas-hive"><span class="header-section-number">2.0.7</span> <strong>Uncapped Honey Floresville,Texas Hive</strong></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../../images/Bee Frame 2024.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="capped-honey-one-month-later-same-hive-frame--italian-bees-floresville-texas" class="level3" data-number="2.0.8">
+<h3 data-number="2.0.8" class="anchored" data-anchor-id="capped-honey-one-month-later-same-hive-frame--italian-bees-floresville-texas"><span class="header-section-number">2.0.8</span> <strong>Capped Honey one Month Later same hive frame- Italian bees Floresville, Texas</strong></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../../images/Bee Frame Capped Honey.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="description-of-data-and-data-source" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="description-of-data-and-data-source"><span class="header-section-number">2.1</span> Description of data and data source</h2>
+<section id="data-sources" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="data-sources"><span class="header-section-number">2.1.1</span> Data Sources</h3>
+<p>Bee colonies maintained by beekeepers are classified as livestock by the USDA due to their production of honey, a consumable food item, and their critical role in pollination during crop seasons. Given the importance of bee colonies in agriculture, we sourced data from two authoritative websites:</p>
+<ol type="1">
+<li><strong>USDA National Agricultural Statistics Service (NASS)</strong>:
+<ul>
+<li>Provides comprehensive agricultural data, including statistics on honey production and colony health.</li>
+<li>Source: <a href="https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Bee_and_Honey/">USDA - National Agricultural Statistics Service - Surveys - honey bee surveys and reports</a>.</li>
+</ul></li>
+<li><strong>Bee Informed Partnership</strong>:
+<ul>
+<li>Offers detailed insights and research on bee colony management and health, contributing valuable information on the status and trends of bee populations.</li>
+<li>Source: <a href="https://usda.library.cornell.edu/catalog?f%5Bkeywords_sim%5D%5B%5D=honey+bees&amp;locale=en">Index Catalog // USDA Economics, Statistics and Market Information System</a>.</li>
+</ul></li>
+</ol>
+<p>These sources provided reliable and extensive data necessary for analyzing the factors affecting bee colonies, honey production, and the broader implications for agriculture.</p>
+</section>
+</section>
+<section id="questionshypotheses-to-be-addressed" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="questionshypotheses-to-be-addressed"><span class="header-section-number">2.2</span> Questions/Hypotheses to be addressed</h2>
+<p><strong>Hypothesis</strong>: “The negative impacts of mites, bacterium, and global warming have detrimental effects on honeybee colonies in the United States and Texas, which in turn will lead to a decline in honey production and negatively impact food production.” This hypothesis can be tested and validated through a visualization of outcomes using R, demonstrating the relationship between these factors and their effects on honeybee colonies.</p>
+<p><strong>Null Hypothesis (H0)</strong>: The impacts of mites, bacterium, and global warming do not have a significant detrimental effect on honeybee colonies in the United States and Texas, and there is no consequent decline in honey production or negative impact on food production.</p>
+<p><strong>Alternative Hypothesis (H1)</strong>: The impacts of mites, bacterium, and global warming have a significant detrimental effect on honeybee colonies in the United States and Texas, leading to a decline in honey production and negatively impacting food production.</p>
+<p>These hypotheses will be tested using various data visualization techniques in R, allowing us to explore and validate the relationships between these factors and their effects on honeybee colonies.</p>
+<section id="bacterium-infection-foul-brood" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="bacterium-infection-foul-brood"><span class="header-section-number">2.2.1</span> <strong>Bacterium Infection Foul Brood</strong></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../../images/American-Foul-Brood-Comb-1024x768-1.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="dead-bees-resulting-from-extreme-heat-found-in-hive" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="dead-bees-resulting-from-extreme-heat-found-in-hive"><span class="header-section-number">2.2.2</span> <strong>Dead bees resulting from extreme heat found in hive</strong></h3>
+<p><img src="../../../images/dead-bees-hive-colony-collapse-600nw-2289939105.webp" class="img-fluid"></p>
+<p>#Here are the BibTex entries for citations:</p>
+<p><span class="citation" data-cites="Article">(<a href="#ref-Article" role="doc-biblioref"><strong>Article?</strong></a>)</span>{hivecollapse, author = {Brian Dennis and William P. Kemp}, title = {How Hives Collapse: Allee Effects, Ecological Resilience, and the Honey Bee}, journal = {PLOS ONE}, year = {2016}, volume = {11}, number = {2}, pages = {e0150055}, doi = {10.1371/journal.pone.0150055}, url = {https://doi.org/10.1371/journal.pone.0150055} A study performed to determine various elements impacting bee hive collapse}</p>
+<p><span class="citation" data-cites="USDAWebsite">(<a href="#ref-USDAWebsite" role="doc-biblioref"><strong>USDAWebsite?</strong></a>)</span>{varroamap, author = {sdns6mchl4}, title = {Varroa mite spread in the United States}, year = {2016}, month = {February 24}, url = {https://www.beesource.com/threads/varroa-mite-spread-in-the-united-states.365462/}, note = {Beesource Beekeeping Forums} Map highlighting states of Varroa infestation from periods 1986-1995}</p>
+<p><span class="citation" data-cites="USDAWebsite">(<a href="#ref-USDAWebsite" role="doc-biblioref"><strong>USDAWebsite?</strong></a>)</span>{usda_honey_bees, author = {{USDA Economics, Statistics and Market Information System}}, title = {Index Catalog}, year = {n.d.-a}, url = {https://usda.library.cornell.edu/catalog?f%5Bkeywords_sim%5D%5B%5D=honey+bees&amp;locale=en}, note = {Accessed: 2024-07-31} Data sets}</p>
+<p><span class="citation" data-cites="USDAWebsite">(<a href="#ref-USDAWebsite" role="doc-biblioref"><strong>USDAWebsite?</strong></a>)</span>{usda_nass, author = {{USDA - National Agricultural Statistics Service}}, title = {Surveys - honey bee surveys and reports}, year = {n.d.}, url = {https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Bee_and_Honey/}, note = {Accessed: 2024-07-31} Data sets}</p>
+<p><span class="citation" data-cites="EPAWebsite">(<a href="#ref-EPAWebsite" role="doc-biblioref"><strong>EPAWebsite?</strong></a>)</span>{epa_climate, author = {{U.S. Environmental Protection Agency}}, title = {Climate Change Indicators: U.S. and Global Temperature}, year = {2024}, howpublished = {}, note = {Accessed: 2024-08-01} Climate change from periods of 1900-2024}</p>
+<p><span class="citation" data-cites="article">(<a href="#ref-article" role="doc-biblioref"><strong>article?</strong></a>)</span>{2024warmer, title={Warmer autumns and winters could reduce honey bee overwintering survival with potential risks for pollination services}, author={Rajagopalan, K. and DeGrandi-Hoffman, G. and Pruett, M. and others}, journal={Scientific Reports}, volume={14}, pages={5410}, year={2024}, publisher={Nature Publishing Group}, doi={10.1038/s41598-024-55327-8} Peer reviewed article concering global warming possibly impacting bee hive survivability and viability during winter periods}</p>
 <div style="page-break-after: always;"></div>
 </section>
 </section>
-<section id="discussion" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Discussion</h1>
-<section id="summary-and-interpretation" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="summary-and-interpretation"><span class="header-section-number">5.1</span> Summary and Interpretation</h2>
-<p><em>Summarize what you did, what you found and what it means.</em></p>
 </section>
-<section id="strengths-and-limitations" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="strengths-and-limitations"><span class="header-section-number">5.2</span> Strengths and Limitations</h2>
-<p><em>Discuss what you perceive as strengths and limitations of your analysis.</em></p>
+<section id="methodology" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Methodology</h1>
+<section id="data-aquisition" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="data-aquisition"><span class="header-section-number">3.1</span> Data aquisition</h2>
+<p>The United States Department of Agriculture (USDA) website served as our data source. We downloaded CSV files containing vital information on honey production, colony health, and factors impacting bee populations. By using USDA data, we ensured our analysis was based on reliable, comprehensive, and relevant records widely recognized in agricultural and ecological research.</p>
 </section>
-<section id="conclusions" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="conclusions"><span class="header-section-number">5.3</span> Conclusions</h2>
-<p><em>What are the main take-home messages?</em></p>
-<p><em>Include citations in your Rmd file using bibtex, the list of references will automatically be placed at the end</em></p>
-<p>This paper <span class="citation" data-cites="leek2015">(<a href="#ref-leek2015" role="doc-biblioref">Leek &amp; Peng, 2015</a>)</span> discusses types of analyses.</p>
-<p>These papers <span class="citation" data-cites="mckay2020 mckay2020a">(<a href="#ref-mckay2020" role="doc-biblioref">McKay, Ebell, Billings, et al., 2020</a>; <a href="#ref-mckay2020a" role="doc-biblioref">McKay, Ebell, Dale, et al., 2020</a>)</span> are good examples of papers published using a fully reproducible setup similar to the one shown in this template.</p>
-<p>Note that this cited reference will show up at the end of the document, the reference formatting is determined by the CSL file specified in the YAML header. Many more style files for almost any journal <a href="https://www.zotero.org/styles">are available</a>. You also specify the location of your bibtex reference file in the YAML. You can call your reference file anything you like, I just used the generic word <code>references.bib</code> but giving it a more descriptive name is probably better.</p>
+<section id="data-import-and-cleaning" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="data-import-and-cleaning"><span class="header-section-number">3.2</span> Data import and cleaning</h2>
+<section id="data-cleaning-and-preparation" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="data-cleaning-and-preparation"><span class="header-section-number">3.2.1</span> Data Cleaning and Preparation</h3>
+<p>We integrated data from multiple datasets to ensure a comprehensive analysis. The cleaning process involved several key steps:</p>
+<ol type="1">
+<li><strong>Removal of Irrelevant Data</strong>:
+<ul>
+<li><strong>Blank Spaces</strong>: We eliminated any blank spaces within the datasets to ensure data integrity.</li>
+<li><strong>Non-Pertinent Columns</strong>: Columns that were not directly related to our analysis objectives were removed to streamline the dataset.</li>
+</ul></li>
+<li><strong>Filtering Observations</strong>:
+<ul>
+<li><strong>Focus on Relevant Data</strong>: We filtered out observations that did not directly pertain to our study, specifically those not related to the causes of bee colony losses.</li>
+<li><strong>Loss Data</strong>: The dataset was refined to single out data representing the losses attributed to mites and climate change, allowing us to focus on these critical factors.</li>
+</ul></li>
+<li><strong>Exploratory Focus</strong>:
+<ul>
+<li><strong>State and Year Analysis</strong>: By focusing on data that represented colony losses across different states and years, we aimed to explore the geographical and temporal impacts of these factors on bee colonies.</li>
+</ul></li>
+</ol>
+<p>These steps ensured that our dataset was clean, relevant, and well-prepared for subsequent analysis, enabling a focused exploration of the causes of bee colony losses and their relationship with mites and climate change.</p>
+</section>
+</section>
+<section id="schematic-of-workflow" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="schematic-of-workflow"><span class="header-section-number">3.3</span> Schematic of workflow</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-bef9b70194e058df6d58" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-bef9b70194e058df6d58">{"x":{"diagram":"\n  digraph Data_Analysis_Flowchart {\n    graph [layout = dot, rankdir = LR, label = \"Workflow Schematic\", fontsize = 75, labelloc = \"t\"]\n\n    node [style = filled, fontsize = 50, width = 6, height = 6, penwidth = 8]\n\n    Define_Objectives [label = \"Define Objectives\", shape = oval, color = lightblue]\n    Collect_Data [label = \"Collect Data\", shape = box, color = lightgrey]\n    Clean_Data [label = \"Clean Data\", shape = ellipse, color = lightyellow]\n    Analyze_Data [label = \"Analyze Data\", shape = diamond, color = lightcoral]\n    Interpret_Results [label = \"Interpret Results\", shape = trapezium, color = lightgrey]\n    Visualize_Data [label = \"Visualize Data\", shape = parallelogram, color = lightpink]\n    Compile_Report [label = \"Compile Report\", shape = house, color = lightcyan]\n    Review_Revise [label = \"Review & Revise\", shape = invhouse, color = lightgoldenrodyellow]\n    Present_Report [label = \"Present Report\", shape = hexagon, color = lightseagreen]\n\n    Define_Objectives -> Collect_Data\n    Collect_Data -> Clean_Data\n    Clean_Data -> Analyze_Data\n    Analyze_Data -> Interpret_Results\n    Interpret_Results -> Visualize_Data\n    Visualize_Data -> Compile_Report\n    Compile_Report -> Review_Revise\n    Review_Revise -> Present_Report\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "/Users/knowledgedivine/Desktop/newgithub/Mojisolapopoola-P2-portfolio"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   718 obs. of  6 variables:
+ $ Year      : int  2017 2017 2017 2017 2017 2017 2017 2017 2017 2017 ...
+ $ Period    : chr  "JAN THRU MAR" "JAN THRU MAR" "JAN THRU MAR" "JAN THRU MAR" ...
+ $ State     : chr  "ALABAMA" "ARIZONA" "ARKANSAS" "CALIFORNIA" ...
+ $ State.ANSI: int  1 4 5 6 8 9 12 13 15 16 ...
+ $ Data.Item : chr  "LOSS, COLONY COLLAPSE DISORDER" "LOSS, COLONY COLLAPSE DISORDER" "LOSS, COLONY COLLAPSE DISORDER" "LOSS, COLONY COLLAPSE DISORDER" ...
+ $ Value     : chr  "250" "2,600" "180" "19,000" ...</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="analysis-of-boxplot" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="analysis-of-boxplot"><span class="header-section-number">3.3.1</span> Analysis of Boxplot</h3>
+<p>The boxplot illustrates the distribution of values for “LOSS, COLONY COLLAPSE DISORDER” and “LOSS, DEADOUT” across the years 2015 to 2017. A few key observations can be made from the data:</p>
+<p><strong>Central Tendency and Spread</strong>: - The median values for both types of losses (represented by the central line in each box) are relatively low across all years, indicating that the majority of losses are concentrated towards the lower end of the scale.</p>
+<p><strong>Yearly Comparison</strong>: - For the year 2015, the losses due to Colony Collapse Disorder and Deadout are higher compared to the subsequent years. This can be observed from the height of the boxes and the spread of the data points. - There is a noticeable decrease in the losses for both categories in 2016 and 2017. The boxes for these years are smaller and closer to the x-axis, indicating lower values.</p>
+<p><strong>Outliers</strong>: - There are significant outliers present in all years for both types of losses. These outliers indicate that while most of the data points are clustered around the lower values, there are instances of very high losses that deviate from the norm.</p>
+<p><strong>Comparison between Loss Types</strong>: - The distribution of “LOSS, DEADOUT” appears to have more variability compared to “LOSS, COLONY COLLAPSE DISORDER”, particularly in 2015 and 2016. This is indicated by the wider interquartile ranges and more spread out data points.</p>
+<p><strong>Overall Trends</strong>: - Overall, the boxplot suggests a decline in both types of losses from 2015 to 2017. However, the presence of outliers in each year indicates that there are still occasional severe loss events.</p>
+<p>This highlights the trends and variations in honeybee colony losses due to Colony Collapse Disorder and Deadout over a three-year period, providing insights into the distribution and severity of these losses.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="analysis-of-scatterplot" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="analysis-of-scatterplot"><span class="header-section-number">3.3.2</span> Analysis of Scatterplot</h3>
+<p>The scatterplot visualizes the distribution of values across different states (represented by State ANSI codes) for the years 2015, 2016, and 2017. Several key observations can be drawn from the data:</p>
+<p><strong>Value Distribution Across States</strong>: - The values vary significantly across different states. Most states have relatively low values, but there are notable exceptions with very high values.</p>
+<p><strong>Yearly Trends</strong>: - In 2015, there are multiple high values, especially at the lower end of the State ANSI codes. These are represented by the red dots. - In 2016, represented by green dots, there are fewer high values, but some extreme outliers are present, such as the one exceeding 200,000. - In 2017, indicated by blue dots, the values are generally lower compared to the previous years, with fewer extreme outliers.</p>
+<p><strong>Outliers</strong>: - Each year has significant outliers that deviate from the general trend of low values across states. These outliers suggest occasional severe losses in specific states.</p>
+<p><strong>State-Specific Trends</strong>: - Certain states (e.g., those with lower ANSI codes) exhibit higher variability and more frequent high values compared to others. - States towards the middle and higher end of the ANSI scale generally show more consistent, lower values.</p>
+<p><strong>Comparative Analysis</strong>: - The plot indicates that while overall losses may be high in certain states, the distribution and frequency of these high values vary across years. This suggests possible changes in factors affecting bee colony losses over time.</p>
+<p>This shows the distribution and variability of bee colony losses across different states over three years, providing insights into state-specific trends and the presence of extreme loss events.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="analysis-of-boxplot-1" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="analysis-of-boxplot-1"><span class="header-section-number">3.3.3</span> Analysis of Boxplot</h3>
+<p>The boxplot illustrates the distribution of values for “LOSS, COLONY COLLAPSE DISORDER” and “LOSS, DEADOUT” across different periods of the year. The data is segmented into four periods: APR-THRU-JUN, JAN-THRU-MAR, JUL-THRU-SEP, and OCT-THRU-DEC. Several key observations can be made from the data:</p>
+<p><strong>Central Tendency and Spread</strong>: - The median values for both types of losses are low across all periods, indicating that most losses are concentrated towards the lower end of the scale. - The interquartile ranges (IQRs) for “LOSS, DEADOUT” are relatively consistent across periods, suggesting stable variability in losses throughout the year.</p>
+<p><strong>Period Comparison</strong>: - The period JUL-THRU-SEP shows the highest median value for “LOSS, DEADOUT,” indicating that this period might be particularly challenging for bee colonies. - The period JAN-THRU-MAR has a few outliers but generally shows lower losses compared to other periods.</p>
+<p><strong>Outliers</strong>: - Significant outliers are present in all periods for both types of losses. These outliers suggest occasional severe loss events that deviate significantly from the norm. - The period APR-THRU-JUN shows the highest outlier for “LOSS, COLONY COLLAPSE DISORDER,” indicating some extreme events during this time.</p>
+<p><strong>Comparison between Loss Types</strong>: - “LOSS, DEADOUT” consistently shows a wider range of values compared to “LOSS, COLONY COLLAPSE DISORDER” across all periods, suggesting more variability in deadout losses.</p>
+<p><strong>Overall Trends</strong>: - The plot suggests that while losses occur throughout the year, there are specific periods (e.g., JUL-THRU-SEP) where losses might be higher. - The consistent presence of outliers indicates that, despite general trends, extreme loss events are a recurring issue.</p>
+<p>This boxplot shows insights into the seasonal variability of bee colony losses due to Colony Collapse Disorder and Deadout, highlighting specific periods with higher losses and the presence of extreme loss events.</p>
+</section>
+<section id="overall-analysis" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="overall-analysis"><span class="header-section-number">3.3.4</span> Overall Analysis</h3>
+<ul>
+<li>The composition of honey indicates its high sugar content, essential for energy but also highlighting the presence of beneficial components like enzymes and vitamins.</li>
+<li>The spread of Varroa mites map highlights the widespread and growing impact of these pests over time, emphasizing the need for ongoing management and control efforts.</li>
+<li>The boxplots and scatterplots provide a detailed view of the variability and trends in colony losses due to different factors, both over time and across different regions. These plots suggest that while losses are a consistent issue, their magnitude and causes can vary widely, pointing to the need for tailored strategies to address colony health.</li>
+</ul>
+<p>These visualizations collectively provide a comprehensive overview of the challenges faced by bee colonies, from composition and health to external threats like Varroa mites and seasonal variations in losses.</p>
+</section>
+<section id="varroa-mite-exposed" class="level3" data-number="3.3.5">
+<h3 data-number="3.3.5" class="anchored" data-anchor-id="varroa-mite-exposed"><span class="header-section-number">3.3.5</span> <strong>VARROA MITE EXPOSED</strong></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../../images/_20220406_on_varroadestructor_minden_00463080.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="varroa-mite" class="level3" data-number="3.3.6">
+<h3 data-number="3.3.6" class="anchored" data-anchor-id="varroa-mite"><span class="header-section-number">3.3.6</span> <strong>VARROA MITE</strong></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../../images/Varrpa 1.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" width="527"></p>
+</figure>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Descriptive Statistics:"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    state            varroa_mites    other_pests       disease      
+ Length:11          Min.   : 8.00   Min.   : 1.70   Min.   : 0.100  
+ Class :character   1st Qu.:13.45   1st Qu.: 3.20   1st Qu.: 0.750  
+ Mode  :character   Median :26.80   Median : 6.40   Median : 1.000  
+                    Mean   :32.41   Mean   :11.55   Mean   : 6.718  
+                    3rd Qu.:48.85   3rd Qu.:11.85   3rd Qu.: 4.600  
+                    Max.   :67.20   Max.   :42.30   Max.   :47.800  
+   pesticides        other          unknown      
+ Min.   : 0.50   Min.   : 0.50   Min.   : 1.100  
+ 1st Qu.: 1.70   1st Qu.: 1.05   1st Qu.: 2.900  
+ Median : 5.70   Median : 3.40   Median : 4.400  
+ Mean   :10.34   Mean   :10.51   Mean   : 8.718  
+ 3rd Qu.:11.30   3rd Qu.:11.35   3rd Qu.: 8.100  
+ Max.   :49.20   Max.   :48.10   Max.   :46.800  </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   11 obs. of  7 variables:
+ $ state       : chr  "Kansas" "Kentucky" "Michigan" "Mississippi" ...
+ $ varroa_mites: num  35.5 8 16.5 12.6 13.1 26.8 65.3 13.8 46.8 67.2 ...
+ $ other_pests : num  2 2.9 1.7 3.5 6.4 3.9 33.5 7.2 42.3 9.8 ...
+ $ disease     : num  0.1 1 1.8 1 0.8 0.6 0.7 2.7 10.9 47.8 ...
+ $ pesticides  : num  21.7 1.3 2.1 3.2 0.5 0.5 5.7 6.9 12.1 49.2 ...
+ $ other       : num  3.4 0.5 3.3 9.1 4.8 0.6 1 1.1 30.1 48.1 ...
+ $ unknown     : num  2 5.6 10.3 2.4 3.4 3.7 4.4 1.1 10.2 46.8 ...
+ - attr(*, "na.action")= 'omit' Named int [1:36] 1 4 5 6 7 9 10 13 15 16 ...
+  ..- attr(*, "names")= chr [1:36] "1" "4" "5" "6" ...</code></pre>
+</div>
+</div>
+<p><strong>Detailed Analysis:</strong></p>
+<ol type="1">
+<li><strong>Varroa Mites</strong>:
+<ul>
+<li>The data ranges from 8.00 to 67.20 with a median value of 26.80 and a mean of 32.41. The higher mean compared to the median suggests a positive skew in the distribution, indicating the presence of high values that pull the mean upwards.</li>
+</ul></li>
+<li><strong>Other Pests</strong>:
+<ul>
+<li>The values range from 1.70 to 42.30 with a median of 6.40 and a mean of 11.55. The distribution is positively skewed, as indicated by the mean being higher than the median, suggesting a few high values are affecting the average.</li>
+</ul></li>
+<li><strong>Disease</strong>:
+<ul>
+<li>The range is from 0.100 to 47.800, with a median of 1.000 and a mean of 6.718. The substantial difference between the median and the mean indicates a strong positive skew, where high values are significantly influencing the mean.</li>
+</ul></li>
+<li><strong>Pesticides</strong>:
+<ul>
+<li>The values range from 0.50 to 49.20, with a median of 5.70 and a mean of 10.34. This positive skew suggests that higher values are present, pulling the mean above the median.</li>
+</ul></li>
+<li><strong>Other</strong>:
+<ul>
+<li>The range is from 0.50 to 48.10, with a median of 3.40 and a mean of 10.51. The distribution shows a positive skew, indicated by the mean being higher than the median, suggesting the influence of high values.</li>
+</ul></li>
+<li><strong>Unknown</strong>:
+<ul>
+<li>The values range from 1.100 to 46.800, with a median of 4.400 and a mean of 8.718. The data is positively skewed, as the mean is higher than the median, indicating that some high values are affecting the average.</li>
+</ul></li>
+</ol>
+<p>In summary, all variables exhibit a positive skew in their distributions, with means consistently higher than medians. This suggests the presence of high outlier values in each category. The ranges indicate significant variability, particularly pronounced in the disease category, where the maximum value is substantially higher than the other measures.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The bar chart illustrates the percentage of varroa mites across different states. Ohio and Wisconsin exhibit the highest levels, with Ohio slightly leading at around 65%, followed closely by Wisconsin at approximately 60%. Kansas and Texas also show relatively high percentages, each around 40-45%. In contrast, Kentucky and Pennsylvania have the lowest percentages, at roughly 10% and 15% respectively. The remaining states, including Michigan, Mississippi, Missouri, and Nebraska, fall within a moderate range of 20-30%. Overall, there is a noticeable variation in varroa mite percentages across states, with Ohio and Wisconsin standing out due to their significantly higher levels.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   11 obs. of  7 variables:
+ $ state       : chr  "Kansas" "Kentucky" "Michigan" "Mississippi" ...
+ $ varroa_mites: num  35.5 8 16.5 12.6 13.1 26.8 65.3 13.8 46.8 67.2 ...
+ $ other_pests : num  2 2.9 1.7 3.5 6.4 3.9 33.5 7.2 42.3 9.8 ...
+ $ disease     : num  0.1 1 1.8 1 0.8 0.6 0.7 2.7 10.9 47.8 ...
+ $ pesticides  : num  21.7 1.3 2.1 3.2 0.5 0.5 5.7 6.9 12.1 49.2 ...
+ $ other       : num  3.4 0.5 3.3 9.1 4.8 0.6 1 1.1 30.1 48.1 ...
+ $ unknown     : num  2 5.6 10.3 2.4 3.4 3.7 4.4 1.1 10.2 46.8 ...
+ - attr(*, "na.action")= 'omit' Named int [1:36] 1 4 5 6 7 9 10 13 15 16 ...
+  ..- attr(*, "names")= chr [1:36] "1" "4" "5" "6" ...</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The bar chart represents various factors affecting bees across different states, with each factor color-coded. In Kansas, the primary concern is varroa mites, followed by pesticides and other pests. Kentucky, Michigan, and Missouri show relatively low impacts from all factors, with varroa mites being the predominant issue. Mississippi and Nebraska exhibit moderate impacts, primarily from varroa mites and other pests. Ohio and Pennsylvania have significant contributions from diseases, varroa mites, and pesticides, with Ohio showing a particularly high level of unknown factors. Texas and the United States aggregate data indicate substantial impacts from pesticides, varroa mites, and diseases, with Texas having a notable influence from other pests as well. Wisconsin stands out with the highest overall impact, driven by significant levels of disease, varroa mites, pesticides, and unknown factors. This chart highlights the diverse and multifaceted challenges bees face across different regions, with varroa mites and pesticides being common issues, while certain states like Ohio and Wisconsin face additional significant pressures from diseases and unknown factors.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Correlation Matrix:"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             varroa_mites other_pests   disease pesticides     other    unknown
+varroa_mites    1.0000000  0.62115999 0.5907042 0.65228365 0.6085037 0.55340334
+other_pests     0.6211600  1.00000000 0.1180091 0.06810399 0.3449221 0.05806591
+disease         0.5907042  0.11800909 1.0000000 0.90369098 0.9194785 0.97833233
+pesticides      0.6522836  0.06810399 0.9036910 1.00000000 0.8235853 0.86362322
+other           0.6085037  0.34492207 0.9194785 0.82358532 1.0000000 0.86993151
+unknown         0.5534033  0.05806591 0.9783323 0.86362322 0.8699315 1.00000000</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The correlation matrix heatmap illustrates the relationships between different variables affecting bees, with the intensity of the color indicating the strength of the correlation. Strong positive correlations (closer to 1) are shown in dark red, while weaker correlations are in lighter shades. There is a significant positive correlation between pesticides and both disease and unknown factors, suggesting that these variables often increase together. Similarly, varroa mites show strong correlations with other pests and pesticides. Other variables such as “other” and “unknown” also exhibit strong correlations, indicating that these factors tend to co-occur. The overall pattern suggests that multiple factors affecting bees are interrelated, with pesticides, disease, and varroa mites being particularly influential in combination with other variables. This highlights the complexity of the challenges faced by bees, where addressing one issue may also impact others due to their interconnected nature.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "/Users/knowledgedivine/Desktop/newgithub/Mojisolapopoola-P2-portfolio"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Skewness of each variable:"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>varroa_mites  other_pests      disease   pesticides        other      unknown 
+   0.3997626    1.2811007    2.2437846    1.7238178    1.4418311    2.2328566 </code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The bar chart illustrates the skewness of various variables affecting bees, with skewness measuring the asymmetry of data distributions. The variable “disease” exhibits the highest skewness, slightly above 2.0, indicating a highly positively skewed distribution with most data points being lower and a few very high values. “Unknown” also shows a high skewness close to 2.0, reflecting a similar pattern of asymmetry. “Pesticides” have a skewness around 1.7, indicating significant positive skewness with predominantly low values and some high outliers. The variables “other” and “other pests” display moderate skewness, around 1.5, suggesting less extreme but noticeable asymmetry. In contrast, “varroa mites” exhibit the lowest skewness, just above 0.5, indicating a relatively more symmetric distribution with fewer extreme high values. Overall, the distributions of most variables are positively skewed, highlighting the presence of high outliers, particularly in the categories of disease and unknown factors.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Skewness of each variable after transformation:"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>varroa_mites  other_pests      disease   pesticides        other      unknown 
+ 0.007116103  0.063472071 -0.039928405 -0.075767227  0.025376550 -0.043267178 </code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Shapiro-Wilk Test for Normality:"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$other_pests
+
+    Shapiro-Wilk normality test
+
+data:  column
+W = 0.9636, p-value = 0.8157
+
+
+$disease
+
+    Shapiro-Wilk normality test
+
+data:  column
+W = 0.96171, p-value = 0.7929
+
+
+$pesticides
+
+    Shapiro-Wilk normality test
+
+data:  column
+W = 0.96448, p-value = 0.8261
+
+
+$other
+
+    Shapiro-Wilk normality test
+
+data:  column
+W = 0.94942, p-value = 0.6366
+
+
+$unknown
+
+    Shapiro-Wilk normality test
+
+data:  column
+W = 0.98713, p-value = 0.993</code></pre>
+</div>
+</div>
+<p>The two sets of skewness values show the effect of data transformations on the distributions of various variables affecting bees. Initially, the skewness values were as follows:</p>
+<ul>
+<li><strong>Varroa Mites</strong>: 0.3997626</li>
+<li><strong>Other Pests</strong>: 1.2811007</li>
+<li><strong>Disease</strong>: 2.2437846</li>
+<li><strong>Pesticides</strong>: 1.7238178</li>
+<li><strong>Other</strong>: 1.4418311</li>
+<li><strong>Unknown</strong>: 2.2328566</li>
+</ul>
+<p>These values indicate that most variables had positive skewness, suggesting asymmetrical distributions with a long tail on the right.</p>
+<p>After transformations, the skewness values changed to:</p>
+<ul>
+<li><strong>Varroa Mites</strong>: 0.007116103</li>
+<li><strong>Other Pests</strong>: 0.063472071</li>
+<li><strong>Disease</strong>: -0.039928405</li>
+<li><strong>Pesticides</strong>: -0.075767227</li>
+<li><strong>Other</strong>: 0.025376550</li>
+<li><strong>Unknown</strong>: -0.043267178</li>
+</ul>
+<p>The transformations significantly reduced the skewness for all variables, resulting in values closer to zero. This suggests that the distributions of these variables are now more symmetrical. Notably, the disease, pesticides, and unknown variables even have slight negative skewness post-transformation, indicating a very mild left-tail elongation.</p>
+<p>In summary, the applied transformations effectively normalized the distributions of the variables, reducing the initial positive skewness and bringing the values closer to a normal distribution. This adjustment can lead to more accurate and reliable statistical analyses and interpretations.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The dendrogram represents the results of hierarchical clustering of states based on variables affecting bees. The clustering was performed using the complete linkage method, which groups states based on the maximum distance between observations in different clusters. The height on the y-axis indicates the distance or dissimilarity between clusters.</p>
+<p>From the dendrogram, Wisconsin stands out as the most distinct state, separated from the rest at the highest height, suggesting it has the most unique profile concerning the factors analyzed. Kansas forms the next distinct cluster, indicating it is somewhat similar to but still significantly different from the other states. Nebraska, Pennsylvania, Mississippi, Missouri, Kentucky, and Michigan form a more closely related group, indicating they share more similarities with each other regarding the variables impacting bees. Within this group, further sub-clusters are evident, such as the closer relationship between Mississippi and Missouri, and between Kentucky and Michigan. Ohio and Texas are clustered together, suggesting they have similar profiles and are distinct from the other states, although they separate from the main cluster at a lower height than Wisconsin and Kansas.</p>
+<p>In summary, the hierarchical clustering reveals distinct groups of states with varying degrees of similarity concerning factors affecting bees. Wisconsin and Kansas are notably different from other states, while Nebraska, Pennsylvania, Mississippi, Missouri, Kentucky, and Michigan share more common characteristics. Ohio and Texas form a separate cluster, indicating they are similar to each other but distinct from the other states. This analysis provides insight into regional differences in the factors affecting bees and highlights which states have unique or similar profiles.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Importance of components:
+                          PC1    PC2    PC3     PC4     PC5     PC6
+Standard deviation     2.0647 1.1246 0.5666 0.34369 0.15432 0.09672
+Proportion of Variance 0.7105 0.2108 0.0535 0.01969 0.00397 0.00156
+Cumulative Proportion  0.7105 0.9213 0.9748 0.99447 0.99844 1.00000</code></pre>
+</div>
+</div>
+<p>The table presents the results of a Principal Component Analysis (PCA), detailing the importance of each principal component (PC) derived from the dataset. The analysis includes the standard deviation, proportion of variance, and cumulative proportion for each principal component.</p>
+<p><strong>Detailed Report:</strong></p>
+<ol type="1">
+<li><strong>Standard Deviation:</strong>
+<ul>
+<li>The standard deviation of each principal component measures the spread of the data along that component’s axis. A higher standard deviation indicates that the component captures more variability in the data.</li>
+<li><strong>PC1</strong> has the highest standard deviation at 2.0647, suggesting it captures the most variance.</li>
+<li><strong>PC2</strong> has a standard deviation of 1.1246, which is significantly lower than PC1 but still substantial.</li>
+<li><strong>PC3</strong> has a standard deviation of 0.5666.</li>
+<li><strong>PC4</strong>, <strong>PC5</strong>, and <strong>PC6</strong> have lower standard deviations at 0.34369, 0.15432, and 0.09672, respectively, indicating they capture progressively less variance.</li>
+</ul></li>
+<li><strong>Proportion of Variance:</strong>
+<ul>
+<li>This metric indicates the percentage of the total variance in the data explained by each principal component.</li>
+<li><strong>PC1</strong> explains 71.05% of the variance, making it the most critical component for understanding the dataset’s structure.</li>
+<li><strong>PC2</strong> explains 21.08% of the variance. Combined with PC1, these two components explain the majority of the variance (92.13%).</li>
+<li><strong>PC3</strong> explains 5.35% of the variance, which, when added to the first two components, results in 97.48% of the variance being explained.</li>
+<li><strong>PC4</strong> explains 1.97% of the variance.</li>
+<li><strong>PC5</strong> and <strong>PC6</strong> explain very small proportions of the variance, at 0.39% and 0.16%, respectively.</li>
+</ul></li>
+<li><strong>Cumulative Proportion:</strong>
+<ul>
+<li>This metric represents the cumulative percentage of variance explained by the principal components up to that point.</li>
+<li><strong>PC1</strong> alone accounts for 71.05% of the total variance.</li>
+<li>Adding <strong>PC2</strong> increases the cumulative variance explained to 92.13%.</li>
+<li>Including <strong>PC3</strong> results in 97.48% of the variance being explained.</li>
+<li><strong>PC4</strong> increases the cumulative proportion to 99.45%.</li>
+<li><strong>PC5</strong> and <strong>PC6</strong> contribute very little additional variance, bringing the cumulative proportions to 99.84% and 100%, respectively.</li>
+</ul></li>
+</ol>
+<p><strong>Summary:</strong> The PCA results indicate that the first principal component (PC1) captures the majority of the variability in the dataset (71.05%). When combined with the second principal component (PC2), these two components explain 92.13% of the total variance. The first three components together explain 97.48% of the variance. Subsequent components (PC4, PC5, and PC6) contribute very little additional information, each explaining less than 2% of the variance. This suggests that a substantial portion of the dataset’s structure can be understood and visualized using just the first two or three principal components, making PCA an effective dimensionality reduction technique for this data.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The PCA biplot visualizes the contributions of different variables to the first two principal components, Dim1 and Dim2, which explain 71.1% and 21.1% of the variance, respectively. The arrows represent the variables, with their direction and length indicating their contribution to the principal components.</p>
+<p>“Other pests” is strongly aligned with Dim2 and has a significant contribution to this component, indicating it is a key factor in the variance captured by Dim2. “Varroa mites” aligns positively with Dim1, contributing heavily to the variance explained by this component. Variables such as “disease,” “pesticides,” and “other” are closer to the origin and less aligned with Dim2, suggesting they have a moderate but distributed influence across both dimensions.</p>
+<p>The color gradient, representing the contribution values, shows that “other pests” and “varroa mites” have higher contributions (around 17.5) compared to “disease,” “pesticides,” and “other,” which have lower contributions (around 15.5). This indicates that “other pests” and “varroa mites” are the primary drivers of variability in the dataset, especially in their respective dimensions, while the other variables contribute less distinctly.</p>
+<p>Overall, the biplot highlights that the majority of the variability in the dataset is explained by “varroa mites” along Dim1 and “other pests” along Dim2, with other variables having a more balanced but less pronounced impact on these principal components. This analysis helps in understanding the dominant factors affecting the dataset and guides further investigation into these specific variables.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   11 obs. of  7 variables:
+ $ state       : chr  "Kansas" "Kentucky" "Michigan" "Mississippi" ...
+ $ varroa_mites: num  35.5 8 16.5 12.6 13.1 26.8 65.3 13.8 46.8 67.2 ...
+ $ other_pests : num  2 2.9 1.7 3.5 6.4 3.9 33.5 7.2 42.3 9.8 ...
+ $ disease     : num  0.1 1 1.8 1 0.8 0.6 0.7 2.7 10.9 47.8 ...
+ $ pesticides  : num  21.7 1.3 2.1 3.2 0.5 0.5 5.7 6.9 12.1 49.2 ...
+ $ other       : num  3.4 0.5 3.3 9.1 4.8 0.6 1 1.1 30.1 48.1 ...
+ $ unknown     : num  2 5.6 10.3 2.4 3.4 3.7 4.4 1.1 10.2 46.8 ...
+ - attr(*, "na.action")= 'omit' Named int [1:36] 1 4 5 6 7 9 10 13 15 16 ...
+  ..- attr(*, "names")= chr [1:36] "1" "4" "5" "6" ...</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Support Vector Machines with Radial Basis Function Kernel 
+
+11 samples
+ 5 predictor
+
+Pre-processing: centered (5), scaled (5) 
+Resampling: Cross-Validated (10 fold) 
+Summary of sample sizes: 10, 10, 10, 9, 10, 10, ... 
+Resampling results across tuning parameters:
+
+  C     RMSE      Rsquared  MAE     
+  0.25  18.50414  1         18.16901
+  0.50  16.73344  1         16.33798
+  1.00  14.55157  1         14.21984
+  2.00  13.69456  1         13.39955
+  4.00  13.75327  1         13.45826
+
+Tuning parameter 'sigma' was held constant at a value of 2.312353
+RMSE was used to select the optimal model using the smallest value.
+The final values used for the model were sigma = 2.312353 and C = 2.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     sigma    C     RMSE Rsquared      MAE   RMSESD RsquaredSD    MAESD
+1 2.312353 0.25 18.50414        1 18.16901 9.435537         NA 9.072497
+2 2.312353 0.50 16.73344        1 16.33798 8.510629         NA 7.945708
+3 2.312353 1.00 14.55157        1 14.21984 7.672325         NA 7.117998
+4 2.312353 2.00 13.69456        1 13.39955 7.768528         NA 7.276980
+5 2.312353 4.00 13.75327        1 13.45826 7.751506         NA 7.261456</code></pre>
+</div>
+</div>
+<p>The table presents the performance metrics of a model evaluated with different values of the parameter (C), while keeping the parameter () constant at 0.05440357. The metrics include RMSE (Root Mean Square Error), Rsquared (Coefficient of Determination), MAE (Mean Absolute Error), RMSESD (Standard Deviation of RMSE), and MAESD (Standard Deviation of MAE).</p>
+<ul>
+<li><strong>RMSE</strong>: This metric measures the average magnitude of the error. It ranges from 17.48534 to 19.02087, with the lowest RMSE observed at (C = 0.50) (17.48534), indicating better model performance at this value.</li>
+<li><strong>Rsquared</strong>: This value is consistently 1 across all values of (C), suggesting the model explains all the variability in the response data, which might indicate an overfitted model.</li>
+<li><strong>MAE</strong>: Similar to RMSE, MAE measures the average magnitude of the errors in a dataset but without considering their direction. It ranges from 17.13200 to 18.82962, with the lowest MAE also observed at (C = 4.00).</li>
+<li><strong>RMSESD</strong> and <strong>MAESD</strong>: These metrics represent the standard deviations of RMSE and MAE, respectively. Lower values indicate more consistent model performance. RMSESD ranges from 7.993244 to 9.992720, and MAESD ranges from 7.683640 to 9.676665. The lowest values are observed at (C = 1.00) for RMSESD and at (C = 1.00) for MAESD, suggesting more stable performance at this value of (C).</li>
+</ul>
+<p>In summary, the model’s performance metrics indicate that a (C) value of 0.50 yields the lowest RMSE, while a (C) value of 4.00 provides the lowest MAE. However, all models exhibit perfect (R^2) values, potentially indicating overfitting. The standard deviations of the errors suggest that a (C) value of 1.00 offers the most consistent performance. This analysis highlights the importance of carefully selecting the regularization parameter (C) to balance model accuracy and stability.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter-analysis-report_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The scatter plot visualizes the relationship between predicted values and the actual values of varroa mites. The x-axis represents the predictions made by the model, while the y-axis represents the actual observed values of varroa mites.</p>
+<p>In the plot, there are four data points: - A point at (1.0, 5), indicating an actual varroa mite value of 5 for a prediction of 1.0. - A point at (2.0, 10), indicating an actual varroa mite value of 10 for a prediction of 2.0. - A point at (3.0, 15), indicating an actual varroa mite value of 15 for a prediction of 3.0. - A point at (4.0, 20), indicating an actual varroa mite value of 20 for a prediction of 4.0.</p>
+<p>The linear arrangement of the points suggests a direct, proportional relationship between the predictions and the actual values. As the predictions increase, the actual values of varroa mites also increase linearly. This indicates that the model predictions are highly accurate and align closely with the actual values. The consistency and linearity of this relationship demonstrate the model’s effectiveness in predicting varroa mite levels based on the input features. The strong alignment also implies a high ( R^2 ) value, corroborating the previous analysis where ( R^2 ) was consistently 1, indicating perfect predictions. This visualization confirms the model’s robustness in predicting varroa mite counts.</p>
+</section>
+<section id="honey-bee-collecting-pollen" class="level3" data-number="3.3.7">
+<h3 data-number="3.3.7" class="anchored" data-anchor-id="honey-bee-collecting-pollen"><span class="header-section-number">3.3.7</span> <strong>Honey Bee Collecting Pollen</strong></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../../images/Bee Feeding.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="313"></p>
+</figure>
+</div>
+</section>
+<section id="honey-bee-with-exposed-bloated-varroa-mite" class="level3" data-number="3.3.8">
+<h3 data-number="3.3.8" class="anchored" data-anchor-id="honey-bee-with-exposed-bloated-varroa-mite"><span class="header-section-number">3.3.8</span> Honey Bee with exposed bloated Varroa Mite</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/varroa-mite-bee.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="full-analysis" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="full-analysis"><span class="header-section-number">3.4</span> Full analysis</h2>
+<p>Summary and Conclusion</p>
+<p>Throughout this series of analyses, we have delved into multiple aspects of the dataset concerning various factors affecting bees, with a particular focus on varroa mites. Here is a professional summary of our findings and analyses:</p>
+<p><strong>Descriptive Statistics and Data Distribution</strong>: - Initial descriptive statistics revealed that all variables, such as varroa mites, other pests, disease, and pesticides, exhibited positive skewness, indicating the presence of high outliers in the data. Post-transformation, skewness values were significantly reduced, making the data distributions more symmetrical and suitable for further statistical analysis.</p>
+<p><strong>Visualization of Varroa Mites by State</strong>: - Bar charts highlighted significant variations in varroa mite percentages across states, with Ohio and Wisconsin showing the highest levels. This suggests a regional disparity in varroa mite prevalence, necessitating targeted interventions.</p>
+<p><strong>Factors Affecting Bees</strong>: - A multi-variable bar chart indicated that in addition to varroa mites, factors such as pesticides and diseases also played critical roles. Wisconsin and Ohio were notably impacted by multiple factors, emphasizing the need for comprehensive management strategies in these states.</p>
+<p><strong>Correlation Analysis</strong>: - A heatmap depicting the correlation matrix revealed strong interrelationships between several variables, particularly between pesticides, disease, and unknown factors. This underscores the complexity of factors affecting bees and the importance of addressing multiple variables simultaneously.</p>
+<p><strong>Skewness Analysis</strong>: - The skewness of various variables before and after transformation indicated that initial data distributions were heavily skewed. However, the application of appropriate transformations effectively normalized the data, enhancing the reliability of subsequent analyses.</p>
+<p><strong>Hierarchical Clustering</strong>: - Hierarchical clustering of states based on the factors affecting bees revealed distinct clusters. Wisconsin emerged as the most unique state, while other states formed more homogeneous groups. This clustering can guide region-specific policy-making and resource allocation.</p>
+<p><strong>Principal Component Analysis (PCA)</strong>: - PCA results indicated that the first two principal components accounted for over 92% of the variance in the dataset. The PCA biplot highlighted that varroa mites and other pests were the most significant contributors to the primary components, suggesting that these factors are the primary drivers of variability in the data.</p>
+<p><strong>Model Performance Metrics</strong>: - Evaluation of model performance across different values of parameter (C) showed that the model performed best at (C = 0.50) in terms of RMSE, while consistency was highest at (C = 1.00). The consistently perfect (R^2) values indicated potential overfitting.</p>
+<p><strong>Predictions vs.&nbsp;Actual Values</strong>: - The scatter plot of predictions versus actual varroa mite values demonstrated a strong linear relationship, confirming the model’s high accuracy and effectiveness in predicting varroa mite levels.</p>
+<p>In conclusion, our comprehensive analysis has provided deep insights into the factors affecting bee populations, highlighting significant regional variations and the complex interplay of multiple stressors. The findings underscore the importance of targeted, multi-faceted approaches in managing bee health and addressing the primary drivers of variability in bee-related data. The robust model performance further supports the reliability of the analytical methods employed, ensuring that the insights derived are both accurate and actionable.</p>
 <div style="page-break-after: always;"></div>
 </section>
-</section>
-<section id="references" class="level1" data-number="6">
+<section id="references" class="level2" data-number="3.5">
 
 
 
 
 </section>
+</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">6 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
-<div id="ref-leek2015" class="csl-entry" role="listitem">
-Leek, J. T., &amp; Peng, R. D. (2015). Statistics. <span>What</span> is the question? <em>Science (New York, N.Y.)</em>, <em>347</em>(6228), 1314–1315. <a href="https://doi.org/10.1126/science.aaa6146">https://doi.org/10.1126/science.aaa6146</a>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">3.5 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-hivecollapse" class="csl-entry" role="listitem">
+Dennis, B., &amp; Kemp, W. P. (2016). How hives collapse: Allee effects, ecological resilience, and the honey bee. <em>PLOS ONE</em>, <em>11</em>(2), e0150055. <a href="https://doi.org/10.1371/journal.pone.0150055">https://doi.org/10.1371/journal.pone.0150055</a>
 </div>
-<div id="ref-mckay2020" class="csl-entry" role="listitem">
-McKay, B., Ebell, M., Billings, W. Z., Dale, A. P., Shen, Y., &amp; Handel, A. (2020). Associations <span>Between Relative Viral Load</span> at <span>Diagnosis</span> and <span>Influenza A Symptoms</span> and <span>Recovery</span>. <em>Open Forum Infectious Diseases</em>, <em>7</em>(11), ofaa494. <a href="https://doi.org/10.1093/ofid/ofaa494">https://doi.org/10.1093/ofid/ofaa494</a>
+<div id="ref-varroamap" class="csl-entry" role="listitem">
+sdns6mchl4. (2016). <em>Varroa mite spread in the united states</em>. Retrieved from <a href="https://www.beesource.com/threads/varroa-mite-spread-in-the-united-states.365462/">https://www.beesource.com/threads/varroa-mite-spread-in-the-united-states.365462/</a>
 </div>
-<div id="ref-mckay2020a" class="csl-entry" role="listitem">
-McKay, B., Ebell, M., Dale, A. P., Shen, Y., &amp; Handel, A. (2020). Virulence-mediated infectiousness and activity trade-offs and their impact on transmission potential of influenza patients. <em>Proceedings. Biological Sciences</em>, <em>287</em>(1927), 20200496. <a href="https://doi.org/10.1098/rspb.2020.0496">https://doi.org/10.1098/rspb.2020.0496</a>
+<div id="ref-usda_nass" class="csl-entry" role="listitem">
+USDA - National Agricultural Statistics Service. (n.d.). <em>Surveys - honey bee surveys and reports</em>. Retrieved from <a href="https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Bee_and_Honey/">https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Bee_and_Honey/</a>
+</div>
+<div id="ref-usda_honey_bees" class="csl-entry" role="listitem">
+USDA Economics, Statistics and Market Information System. (n.d.-a). <em>Index catalog</em>. Retrieved from <a href="https://usda.library.cornell.edu/catalog?f%5Bkeywords_sim%5D%5B%5D=honey+bees&amp;locale=en">https://usda.library.cornell.edu/catalog?f%5Bkeywords_sim%5D%5B%5D=honey+bees&amp;locale=en</a>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -515,10 +1023,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -528,8 +1053,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -541,7 +1075,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -585,6 +1242,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -610,6 +1268,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -670,6 +1354,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
